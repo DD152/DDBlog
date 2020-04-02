@@ -1,0 +1,25 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ddblog?serverTimezone=UTC&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+uploadFile:
+  resourceHandler: /blogimg/**   #请求 url 中的资源映射
+  location: E:/ddblog
+
+messages:
+  basename: i18n/message
